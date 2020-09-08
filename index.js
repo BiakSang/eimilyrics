@@ -21,25 +21,6 @@ mongoose.connect(process.env.DB_CONNECTION_STRING, { useNewUrlParser: true, useU
     // listen to port
     app.listen(PORT, () => {
         console.log(`Server running at port ${PORT}...`)
-
-
-        // practice for mongodb and mongoose
-        const Song = require("./models/Song")
-        const test = async () => {
-            const songs = await Song.aggregate([
-                {
-                    $search: {
-                        "autocomplete": {
-                            "query": "t.pumkhothang",
-                            "path": "writer"
-                        }
-                    }
-                }
-            ])
-            console.log(songs)
-        }
-        // test()
-
     })
 })
 

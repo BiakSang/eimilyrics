@@ -71,5 +71,5 @@ app.use((err, req, res, next) => {
 
 // match all routes to index.html
 app.get("/", (req, res) => {
-    res.sendFile(`${__dirname}/frontend/build/index.html`)
+    res.sendFile(`${__dirname}/public/index.html`)
 })

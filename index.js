@@ -56,6 +56,16 @@ app.use(express.static("./public"))
 
 
 // handle routes
+app.get("/getip", (req, res, next) => {
+    let ipAddr = req.headers["x-forwarded-for"]
+
+    if (!ipAddr){
+        return res.send("no ip address!")
+    }
+
+    const list = ipAddr.split(",")
+    res.send(list[list.length-1])
+})
 app.use("/api", api)
 
 

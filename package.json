@@ -1,0 +1,23 @@
+{
+  "name": "eimilyrics",
+  "version": "1.0.0",
+  "description": "The wikipedia of eimi songs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "npm start --prefix frontend",
+    "backend": "nodemon index",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "author": "Biaksang Munsong",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "get-video-id": "^3.1.4",
+    "mongoose": "^5.10.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}

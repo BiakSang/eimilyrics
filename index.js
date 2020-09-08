@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8080
 dotenv.config()
 
 
-// connect to database
+// connect to mongodb database
 mongoose.connect(process.env.DB_CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, err => {
     if (err){
         return console.log(err)
